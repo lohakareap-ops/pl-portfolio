@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pankaj L. Lohakare | Executive SCM & Procurement Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-white: #ffffff;
+            --bg-light: #f8f9fa;
+            --bg-card: #ffffff;
+            --accent-brand: #e05319; /* Solid executive burnt orange */
+            --text-main: #111115;
+            --text-muted: #5c5f6a;
+            --border-clean: #d1d3d8; /* Sharp structural borders */
+            --font-display: 'Syne', sans-serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --transition-premium: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-white);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- GLOBAL MARGINS & CONTAINER --- */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.2rem 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid var(--border-clean);
+        }
+        nav .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-decoration: none;
+            color: var(--text-main);
+            z-index: 102;
+        }
+        .logo span { color: var(--accent-brand); }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: var(--transition-premium);
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-brand); }
+
+        /* Mobile Menu Toggle Button */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            cursor: pointer;
+            z-index: 102;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--bg-white);
+            padding-top: 120px;
+            padding-bottom: 4rem;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+        .tagline-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--bg-light);
+            border: 2px solid var(--border-clean);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            width: fit-content;
+            margin-bottom: 1.5rem;
+        }
+        .tagline-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-brand);
+            border-radius: 50%;
+        }
+        .tagline {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            line-height: 1.15;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 2rem;
+            color: var(--text-main);
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent-brand);
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition-premium);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: var(--accent-brand);
+            color: white;
+            border: 1px solid transparent;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #c94511;
+        }
+        .btn-secondary {
+            background: var(--bg-white);
+            color: var(--text-main);
+            border: 2px solid var(--border-clean);
+        }
+        .btn-secondary:hover {
+            background: var(--bg-light);
+            border-color: var(--text-main);
+        }
+
+        /* --- CARD OVERVIEW --- */
+        .hero-frame {
+            position: relative;
+            width: 100%;
+        }
+        .glass-dossier {
+            background: var(--bg-light);
+            border: 2px solid var(--border-clean);
+            border-radius: 28px;
+            padding: 2.2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition-premium);
+        }
+        .hero-frame:hover .glass-dossier {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+            border-color: var(--accent-brand);
+        }
+        .dossier-header {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            border-bottom: 2px solid var(--border-clean);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        /* --- CSS MEIN IS CODE KO UPDATE KAR DO --- */
+
+        .dossier-avatar {
+           width: 150px;          
+           height: 220px;        
+           border-radius: 16px;   
+           background: #ffffff;
+           border: 3px solid var(--accent-brand); /* Burnt orange premium border */
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-shrink: 0;
+           overflow: hidden;      /* Badi photo ko box ke bahar nahi aane dega */
+           box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+        .dossier-avatar img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;     /* Photo ko automatic perfect square box mein crop kar dega */
+          object-position: center top; 
+          display: block;
+} 
+        
+        .dossier-fact-row {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .dossier-fact {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border-clean);
+            padding-bottom: 0.5rem;
+            gap: 1rem;
+        }
+        .dossier-fact:last-child { border-bottom: none; }
+        .dossier-fact span:first-child { color: var(--text-muted); }
+        .dossier-fact span:last-child { color: var(--text-main); font-weight: 600; text-align: right; }
+
+        /* --- METRICS BAR --- */
+        .metrics-bar {
+            background: var(--bg-light);
+            padding: 3.5rem 0;
+            border-top: 2px solid var(--border-clean);
+            border-bottom: 2px solid var(--border-clean);
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .metric-item {
+            border-right: 2px solid var(--border-clean);
+            padding: 0 0.5rem;
+        }
+        .metric-item:last-child { border-right: none; }
+        .metric-item h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            color: var(--accent-brand);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .metric-item p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- COMPETENCIES SECTION --- */
+        .section {
+            padding: clamp(4rem, 8vw, 7rem) 0;
+        }
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 3.5rem;
+        }
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+        .section-header h2 span { color: var(--accent-brand); }
+        .section-header p { color: var(--text-muted); font-size: 1.05rem; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .expert-card {
+            background: var(--bg-white);
+            border: 2px solid var(--border-clean);
+            border-radius: 20px;
+            padding: 2.2rem;
+            transition: var(--transition-premium);
+        }
+        .expert-card:hover {
+            border-color: var(--accent-brand);
+            transform: translateY(-5px);
+        }
+        .card-num {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            display: block;
+            font-weight: bold;
+            border-bottom: 1px solid var(--border-clean);
+            padding-bottom: 0.5rem;
+        }
+        .expert-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+        }
+        .detail-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+        .detail-list li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            position: relative;
+            padding-left: 1.25rem;
+        }
+        .detail-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 2px;
+            background: var(--accent-brand);
+        }
+
+        /* --- CHRONOLOGY TIMELINE --- */
+        .bg-light-section {
+            background-color: var(--bg-light);
+            border-top: 2px solid var(--border-clean);
+            border-bottom: 2px solid var(--border-clean);
+        }
+        .timeline-container {
+            position: relative;
+            margin-top: 3rem;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 27px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--border-clean), var(--accent-brand), var(--border-clean));
+        }
+        .timeline-node {
+            display: grid;
+            grid-template-columns: 56px 1fr;
+            gap: 2rem;
+            position: relative;
+            margin-bottom: 3.5rem;
+        }
+        .node-marker {
+            width: 56px;
+            height: 56px;
+            background: var(--bg-white);
+            border: 2px solid var(--border-clean);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            z-index: 2;
+            transition: var(--transition-premium);
+        }
+        .timeline-node:hover .node-marker {
+            border-color: var(--accent-brand);
+            color: var(--accent-brand);
+        }
+        .node-body {
+            background: var(--bg-white);
+            border: 2px solid var(--border-clean);
+            border-radius: 20px;
+            padding: 2.2rem;
+        }
+        .node-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--border-clean);
+            padding-bottom: 1.25rem;
+            margin-bottom: 1.25rem;
+            gap: 1.5rem;
+        }
+        .node-title h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--text-main);}
+        .node-title h4 { color: var(--accent-brand); font-weight: 500; font-size: 0.95rem; }
+        .node-badge {
+            background: var(--bg-light);
+            border: 2px solid var(--border-clean);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--text-main);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .node-content h5 {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .node-content ul {
+            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            gap: 0.85rem;
+            list-style: none;
+        }
+        .node-content ul li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 0.5rem;
+        }
+        .node-content ul li::before {
+            content: "→";
+            color: var(--accent-brand);
+        }
+
+        /* --- SYSTEMS CONFIGURATION --- */
+        .systems-box {
+            background: var(--bg-light);
+            border: 2px solid var(--border-clean);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+        .sys-group h3 {
+            font-size: 1.15rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-clean);
+            padding-bottom: 0.5rem;
+        }
+        .badge-wall {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        .sys-badge {
+            background: var(--bg-white);
+            border: 2px solid var(--border-clean);
+            color: var(--text-main);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition-premium);
+        }
+        .sys-badge:hover {
+            border-color: var(--accent-brand);
+        }
+
+        /* --- FLOATING WHATSAPP CTA --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25d366;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+            z-index: 99;
+            text-decoration: none;
+            transition: var(--transition-premium);
+            border: 2px solid #ffffff;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08) translateY(-4px);
+        }
+        .whatsapp-float svg {
+            width: 26px;
+            height: 26px;
+            fill: white;
+        }
+
+        /* --- FOOTER & CONTACT --- */
+        footer {
+            border-top: 2px solid var(--border-clean);
+            padding: 3.5rem 0;
+            background: var(--bg-white);
+        }
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        .footer-contact {
+            display: flex;
+            gap: 2rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition-premium);
+        }
+        .contact-item:hover { color: var(--accent-brand); }
+
+        /* --- HIGH PERFORMANCE RESPONSIVE ENGINE --- */
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+            .hero-content { text-align: center; display: flex; flex-direction: column; align-items: center; }
+            .hero-frame { max-width: 540px; margin: 0 auto; }
+            .glass-dossier { transform: none !important; }
+            
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+            .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+            .metric-item { border-right: none; border-bottom: 2px solid var(--border-clean); padding-bottom: 1.5rem; }
+            .metric-item:nth-child(3), .metric-item:nth-child(4) { border-bottom: none; padding-bottom: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1.25rem; }
+            
+            /* Mobile Navigation Drawer Overlay */
+            .mobile-menu-toggle { display: block; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 340px;
+                height: 100vh;
+                background: var(--bg-white);
+                border-left: 2px solid var(--border-clean);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 6rem 2.5rem;
+                gap: 2rem;
+                transition: var(--transition-premium);
+                z-index: 101;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.03);
+            }
+            .nav-links.active { right: 0; }
+            .nav-links .btn-secondary { width: 100%; margin-top: 1rem; }
+
+            .skills-grid { grid-template-columns: 1fr; }
+            .node-header { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+            .node-content ul { grid-template-columns: 1fr; }
+            .systems-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .systems-box { padding: 1.75rem; }
+            
+            .footer-flex { flex-direction: column; text-align: center; }
+            .footer-contact { flex-direction: column; gap: 1rem; align-items: center; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding-top: 100px; }
+            .metrics-grid { grid-template-columns: 1fr; }
+            .metric-item:nth-child(3) { border-bottom: 2px solid var(--border-clean); padding-bottom: 1.5rem; }
+            .timeline-container::before { left: 19px; }
+            .timeline-node { grid-template-columns: 40px 1fr; gap: 1rem; }
+            .node-marker { width: 40px; height: 40px; border-radius: 12px; }
+            .node-body { padding: 1.5rem; }
+            .btn { width: 100%; }
+            .whatsapp-float { bottom: 16px; right: 16px; width: 50px; height: 50px; }
+            .whatsapp-float svg { width: 22px; height: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/919765304997" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.498 4.76 1.499 5.429-.001 9.85-4.388 9.854-9.785.002-2.613-1.015-5.074-2.864-6.928C16.486 2.086 14.021 1.07 11.408 1.07c-5.455 0-9.875 4.39-9.879 9.788-.001 1.768.482 3.49 1.398 5.016l-1.022 3.728 3.825-1.002zm11.766-7.15c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+    </a>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">PANKAJ  <span> LOHAKARE</span></a>
+            
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active" class="nav-item">Home</a></li>
+                <li><a href="#expertise" class="nav-item">Expertise</a></li>
+                <li><a href="#chronology" class="nav-item">Chronology</a></li>
+                <li><a href="#architecture" class="nav-item">Systems</a></li>
+                <li><a href="mailto:lohakare8@gmail.com" class="btn btn-secondary" style="padding: 0.5rem 1.4rem; font-size: 0.85rem; border-radius: 12px;">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="tagline-container">
+                    <div class="tagline-dot"></div>
+                    <span class="tagline">Materials Management Specialist</span>
+                </div>
+                <h1>Strategic Procurement<br><em>& Supply Chain</em> Authority</h1>
+                <p>Deploying 25 years of structural engineering procurement, capital asset purchasing, and advanced inventory systems across India's largest Agro, Solvent, and Edible Oil conglomerates.</p>
+                <div class="btn-group">
+                    <a href="#chronology" class="btn btn-primary">Review Dossier <i data-lucide="arrow-right"></i></a>
+                    <a href="mailto:lohakare8@gmail.com" class="btn btn-secondary">Initiate Contact <i data-lucide="mail"></i></a>
+                </div>
+            </div>
+            <div class="hero-frame">
+                <div class="glass-dossier">
+                    <div class="dossier-header">
+                        <div class="dossier-avatar">
+                             <img src="profile-headshot.jpg" alt="Pankaj L. Lohakare Headshot">
+                        </div>
+                        <div class="dossier-meta">
+                            <h3>Pankaj Lohakare</h3>
+                            <p>Verified Professional</p>
+                        </div>
+                    </div>
+                    <div class="dossier-fact-row">
+                        <div class="dossier-fact"><span>Location</span><span>Nagpur, India</span></div>
+                        <div class="dossier-fact"><span>Core Domain</span><span>Edible Oil / Food Industry</span></div>
+                        <div class="dossier-fact"><span>Operational ERP</span><span>SAP MM Modules</span></div>
+                        <div class="dossier-fact"><span>Management Depth</span><span>Multi-Unit Operations</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="metrics-bar">
+        <div class="container metrics-grid">
+            <div class="metric-item">
+                <h2>25+</h2>
+                <p>Years of Experience</p>
+            </div>
+            <div class="metric-item">
+                <h2>4+</h2>
+                <p>Corporate Groups</p>
+            </div>
+            <div class="metric-item">
+                <h2>0%</h2>
+                <p>Stock Out Variance</p>
+            </div>
+            <div class="metric-item">
+                <h2>100%</h2>
+                <p>SOP Compliance</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Structural <span>Competencies</span></h2>
+                <p>Targeted core competencies across the entire corporate supply chain spectrum.</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="expert-card">
+                    <span class="card-num">01 / PURCHASE MANAGEMENT</span>
+                    <h3>Strategic Sourcing</h3>
+                    <ul class="detail-list">
+                        <li>Formulating rigorous weekly, monthly, and quarterly macro-procurement master blueprints.</li>
+                        <li>Sourcing international & domestic raw material streams optimized for production balance.</li>
+                        <li>High-tech machinery asset acquisition engineered for factory output maximization.</li>
+                    </ul>
+                </div>
+                <div class="expert-card">
+                    <span class="card-num">02 / VENDOR DEVELOPMENT</span>
+                    <h3>Database Asset Control</h3>
+                    <ul class="detail-list">
+                        <li>Strict ABC classification structures ranking vendors via metric costs and quality compliance.</li>
+                        <li>Active deployment of substitute domestic vendor channels to offset reliance on imported items.</li>
+                        <li>Comprehensive operational vendor training to ensure alignment with standard benchmarks.</li>
+                    </ul>
+                </div>
+                <div class="expert-card">
+                    <span class="card-num">03 / WAREHOUSE & STORES</span>
+                    <h3>Inventory Preservation</h3>
+                    <ul class="detail-list">
+                        <li>Executing strict stock tracking rules to keep a clean book value with zero stock variance.</li>
+                        <li>Designing and deploying multi-facility Standard Operating Procedures (SOPs) for warehouse storage.</li>
+                        <li>Fluid material receipt routing systems connecting main storage yards directly to lines.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light-section" id="chronology">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional <span>Chronology</span></h2>
+                <p>Twenty-five years of corporate leadership inside landmark food and refinery enterprises.</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-node">
+                    <div class="node-marker"><i data-lucide="briefcase"></i></div>
+                    <div class="node-body">
+                        <div class="node-header">
+                            <div class="node-title">
+                                <h3>Purchase Manager</h3>
+                                <h4>Sneha Farms Pvt. Ltd. (SNEHA GROUP)</h4>
+                            </div>
+                            <span class="node-badge">2018 — PRESENT</span>
+                        </div>
+                        <div class="node-content">
+                            <h5>Scope of Authority (Head Office, Hyderabad)</h5>
+                            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Directing the consolidated material procurement pipeline across a matrix of operational units including Karimnagar, Chandrapur, Yavatmal, and Sneha Gold Proteins.</p>
+                            <h5>Operational Focus Matrix</h5>
+                            <ul>
+                                <li>Engineering Contract Procurement</li>
+                                <li>SAP automated Work Orders</li>
+                                <li>Comparative Statement Analytics</li>
+                                <li>Transporter Yard Routing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-node">
+                    <div class="node-marker"><i data-lucide="package"></i></div>
+                    <div class="node-body">
+                        <div class="node-header">
+                            <div class="node-title">
+                                <h3>Marketing, Sales & Promotion</h3>
+                                <h4>Worldwide Packaging</h4>
+                            </div>
+                            <span class="node-badge">2015 — 2018</span>
+                        </div>
+                        <div class="node-content">
+                            <p style="color: var(--text-muted);">Spearheaded industrial packaging framework distributions, technical specification sales, and B2B commercial supplier logistics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-node">
+                    <div class="node-marker"><i data-lucide="factory"></i></div>
+                    <div class="node-body">
+                        <div class="node-header">
+                            <div class="node-title">
+                                <h3>Purchase Executive</h3>
+                                <h4>Adani Wilmar Ltd. (ADANI GROUP)</h4>
+                            </div>
+                            <span class="node-badge">2008 — 2014</span>
+                        </div>
+                        <div class="node-content">
+                            <h5>Matrix Responsibilities</h5>
+                            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Managed complete packaging assets and physical procurement operations across three manufacturing hubs: Saoner, Chhindwara, and Amravati.</p>
+                            <h5>Core Actions</h5>
+                            <ul>
+                                <li>Artwork SKU Asset Mapping</li>
+                                <li>Unit Packaging Sourcing</li>
+                                <li>Vendor Base Scale Management</li>
+                                <li>Just-In-Time Stock Buffering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-node">
+                    <div class="node-marker"><i data-lucide="database"></i></div>
+                    <div class="node-body">
+                        <div class="node-header">
+                            <div class="node-title">
+                                <h3>Purchasing Officer & Stores In-charge</h3>
+                                <h4>Ruchi Soya Industries & Anand Mohata Agro</h4>
+                            </div>
+                            <span class="node-badge">1999 — 2008</span>
+                        </div>
+                        <div class="node-content">
+                            <p style="color: var(--text-muted);">Pioneered early ledger integrations, physical store reconciliations, cross-department quality inspection routing, and inventory asset protection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="architecture">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical <span>Infrastructure</span></h2>
+                <p>Enterprise Resource Planning frameworks and methodologies used to manage high-volume inventories.</p>
+            </div>
+
+            <div class="systems-box">
+                <div class="systems-grid">
+                    <div class="sys-group">
+                        <h3><i data-lucide="cpu" style="color: var(--accent-brand);"></i> Enterprise Systems</h3>
+                        <div class="badge-wall">
+                            <span class="sys-badge">SAP MM (Operational Module)</span>
+                            <span class="sys-badge">ERP BAAN-IV</span>
+                            <span class="sys-badge">Tally 4.5</span>
+                            <span class="sys-badge">SAP Comparative Statement Engines</span>
+                            <span class="sys-badge">SAP Inventory Analytics System</span>
+                        </div>
+                    </div>
+                    <div class="sys-group">
+                        <h3><i data-lucide="award" style="color: var(--accent-brand);"></i> Executive Toolsets</h3>
+                        <div class="badge-wall">
+                            <span class="sys-badge">Contract Negotiation</span>
+                            <span class="sys-badge">Team Coordination & Alignment</span>
+                            <span class="sys-badge">Cross-Functional Communication</span>
+                            <span class="sys-badge">MS Excel Tracking Architectures</span>
+                            <span class="sys-badge">Time Management Frameworks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-flex">
+            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Pankaj L. Lohakare. Executive Dossier Portfolio.</p>
+            <div class="footer-contact">
+                <a href="mailto:lohakare8@gmail.com" class="contact-item"><i data-lucide="mail" style="width: 18px;"></i> lohakare8@gmail.com</a>
+                <span class="contact-item"><i data-lucide="phone" style="width: 18px;"></i> +91 9765304997</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Vectors
+        lucide.createIcons();
+
+        // Mobile Engine Hook
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const menuIcon = document.getElementById('menuIcon');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Dynamic State Vector Switching
+            if (navLinks.classList.contains('active')) {
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Close drawer explicitly upon linking selection
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
